@@ -765,12 +765,15 @@
 		background-size: auto, cover;
 		background-position: top left, center center;
 		background-repeat: repeat, no-repeat;
-		padding: 14em 0 14em 0;
+		padding: 8em 0 8em 0;
 		text-align: center;
 		color: #fff;
 
+        p.resizeimage img{
+            width: 50%;
+        }
+
 		header {
-            margin-top:-250px;
 			h1 {
 				font-size: 2.25em;
 				line-height: 1.25em;
@@ -797,6 +800,7 @@
 	.main {
 		position: relative;
 		margin: 0;
+
         img{ border-radius:50px;}
         img.winner_img{
             float:left;

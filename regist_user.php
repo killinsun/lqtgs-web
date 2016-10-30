@@ -40,8 +40,8 @@
             header('Content-Type: text/plain; charset=UTF-8', true,500);
             echo "ERROR";
         }
-
          
-        /* index.phpへリダイレクト */
-        header('Location: index.php');
     }
+    header('Location: index.php');
+?>
+

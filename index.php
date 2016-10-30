@@ -77,7 +77,9 @@
 		<!-- Main Title -->
 			<section id="title" class="dark">
 				<header>
-                    <img src="./images/logo_full_white.png">
+                    <p class="resizeimage">
+                        <img src="./images/logo_full_white.png">
+                    </p>
 					<p>Can you defeat me?</p>
 				</header>
 				<footer>
