@@ -1,0 +1,38 @@
+<?php
+session_start();
+ 
+require 'twitteroauth/autoload.php';
+require 'env.php';
+use Abraham\TwitterOAuth\TwitterOAuth;
+ 
+/* Access Token、Access Secretがsessionにない場合はclearsessions,phpへリダイレクト */
+if (empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_token']) || empty($_SESSION['access_token']['oauth_token_secret'])) {
+    header('Location: ./logout.php');
+}
+ 
+/* Access Token、Access Secretをsessionから取得 */
+$access_token = $_SESSION['access_token'];
+ 
+/* TwitterOAuthを生成（またまたパラメータが違う...パラメータによって使用できる関数を制御しています） */
+$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
+ 
+/* ユーザー情報の取得 */
+$user = $connection->get("account/verify_credentials");
+?>
+
+<!DOCTYPE HTML>
+
+<?php include('html.inc'); ?>
+<div>
+    <a href="https://twitter.com/<?php echo $user->screen_name;?>">
+        <img src="<?php echo $user->profile_image_url_https; ?>" alt="...">
+    </a>
+    <div>
+        <h4>
+            <a href="https://twitter.com/<?php echo $user->screen_name;?>">
+                <?php echo $user->name;?> <small>@<?php echo $user->screen_name;?></small>
+            </a>
+        </h4>
+        <?php echo $user->status->text;?>
+    </div>
+</div>
