@@ -1351,6 +1351,30 @@ form :-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.85) !important; }
 
 /* Table */
+table#status_table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+  table#status_table td {
+    padding-right: 4%; }
+  table#status_table tr {
+    border-bottom: solid 1px #e6e6e6; }
+
+table#achivement_table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+  table#achivement_table td {
+    padding-right: 4%; }
+  table#achivement_table tr {
+    margin-bottom: 2%; }
+  table#achivement_table th {
+    border-bottom: solid 1px #e6e6e6; }
+
 table {
   width: 100%; }
   table.default {
@@ -1590,6 +1614,10 @@ button,
       font-size: 2.25em;
       font-weight: 100;
       margin-bottom: 0; }
+    .main > header h3 {
+      font-size: 1.75em;
+      font-weight: 100;
+      margin-bottom: 0; }
     .main > header p {
       margin: 2em 0 0 0;
       padding: 0;
@@ -1761,6 +1789,8 @@ button,
   .main > .content {
     padding: 3em 20px 3em 20px; }
     .main > .content h3 {
-      font-size: 1.25em; } }
+      font-size: 1.75em; }
+    .main > .content img {
+      width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
