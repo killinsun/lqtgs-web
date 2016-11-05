@@ -15,9 +15,9 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
-        <!-- Header -->>
+        <!-- Header -->
         <?php 
-        include("./header.php");
+            include("./header.php");
         ?>
 
 		<!-- Main Title -->
@@ -148,8 +148,7 @@
                       </footer>
                     </div>
             </section>
-                        
-
+            
 		<!-- Footer -->
 			<section id="footer">
 				<ul class="icons">
